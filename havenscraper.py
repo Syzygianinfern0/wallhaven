@@ -28,7 +28,7 @@ if __name__ == "__main__":
 
     new_downloads = list()
 
-    for wall in latest_scrape[:5]:
+    for wall in reversed(latest_scrape[:10]):
         if wall["id"] not in local_data[:, 0]:
             download_path = wall["path"]
             status = download_url(download_path)
