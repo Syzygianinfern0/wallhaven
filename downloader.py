@@ -12,7 +12,7 @@ def download_url(url, folder="downloads"):
     try:
         r = requests.get(url, stream=True)
         if r.status_code == requests.codes.ok:
-            with open(os.path.join(folder, file_name), 'wb') as f:
+            with open(os.path.join(folder, file_name), "wb") as f:
                 for data in r:
                     f.write(data)
         return True
